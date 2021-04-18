@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+ cats_prod:
+    container_name: cats-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - '1337:80'
