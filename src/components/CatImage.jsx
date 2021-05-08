@@ -10,7 +10,12 @@ const CatImage = () => {
     getCatUrl().then(setCatUrl);
   }, []);
 
-  return catUrl ? <img src={catUrl} /> : <CircleLoader color="#00aeff" />;
+  return catUrl ? 
+        (<div>
+          <img style={{maxWidth: '500px'}} src={catUrl} /> 
+          <p style={{fontSize: '12px'}}>Made by - Jhoan García</p>
+        </div>) 
+  : <CircleLoader color="#00aeff" />;
 };
 
 export default CatImage;
